@@ -1,3 +1,47 @@
 <ion-app>
   <ion-router-outlet></ion-router-outlet>
 </ion-app>
+<ion-app>
+  <!-- Conteúdo principal do aplicativo -->
+  <ion-router-outlet></ion-router-outlet>
+
+  <!-- Menu lateral -->
+  <ion-menu side="start" contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item routerLink="/pagina1">
+          Página 1
+        </ion-item>
+        <ion-item routerLink="/pagina2">
+          Página 2
+        </ion-item>
+        <!-- Adicione mais itens de menu conforme necessário -->
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <!-- Botão para abrir o menu lateral -->
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+</ion-app>
+
+<ion-app>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="login">
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-label>Perfil</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="home">
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-label>Início</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-app>
+
